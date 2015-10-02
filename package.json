@@ -23,12 +23,13 @@
   "scripts": {
     "precheck": "twolfson-style precheck lib/ test/",
     "lint": "twolfson-style lint lib/ test/",
-    "pretest": "twolfson-style install",
     "test": "npm run precheck && mocha --reporter dot && npm run lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lucene-query-parser": "~1.0.1"
+  },
   "devDependencies": {
-    "jscs": "~1.7.3",
+    "jscs": "~1.13.1",
     "jshint": "~2.5.10",
     "mocha": "~1.11.0",
     "twolfson-style": "~1.6.0"
