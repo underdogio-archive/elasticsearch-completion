@@ -1,7 +1,7 @@
 {
   "name": "elasticsearch-completion",
   "description": "Low level query completion for Elasticsearch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/underdogio/elasticsearch-completion",
   "author": {
     "name": "Todd Wolfson",
