@@ -29,6 +29,9 @@
     "lucene-query-parser": "~1.0.1"
   },
   "devDependencies": {
+    "foundry": "~4.3.2",
+    "foundry-release-git": "~2.0.2",
+    "foundry-release-npm": "~2.0.2",
     "jscs": "~1.13.1",
     "jshint": "~2.5.10",
     "mocha": "~1.11.0",
@@ -39,5 +42,11 @@
     "completion",
     "autocomplete",
     "typeahead"
-  ]
+  ],
+  "foundry": {
+    "releaseCommands": [
+      "foundry-release-git",
+      "foundry-release-npm"
+    ]
+  }
 }
