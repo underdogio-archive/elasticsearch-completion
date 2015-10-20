@@ -189,3 +189,22 @@ describe('A query with 3 fields with no terms', function () {
     });
   });
 });
+
+// Edge cases
+// DEV: This case was causing errors since the grammar wasn't valid
+describe('A query with colon on the non-rightmost field', function () {
+  before(function createCompletion () {
+    this.esCompletion = new ElasticsearchCompletion([
+      'name'
+    ]);
+  });
+
+  describe('when completed', function () {
+    it('has no errors', function () {
+      var matches = this.esCompletion.match('name: _exists_:n');
+      assert.deepEqual(matches, [
+        'name: _exists_:name'
+      ]);
+    });
+  });
+});
